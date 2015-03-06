@@ -1,11 +1,102 @@
 <!DOCTYPE html>
-<html>
-<head>
-<title>
-</title>
-</head>
+<html lang="en">
+  <head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta name="author" content="">
+		<title>Red Bit Blue Bit custom cheatsheets</title>
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<style type="text/css">
+			.countdown {
+				color: #ccc;
+				font-size: 18px;
+				font-weight: bold;
+				position: absolute;
+				top: 10px;
+				right: 10px;
+		</style>
+  </head>
 <body>
-<h1>Hello, World!</h1>
+<div class="container">
+	<h1>Red Bit Blue Bit dashboard</h1>
+	<div class="col-md-6">
+		<table class="table table-striped table-hover">
+		<tbody>
+			<tr>
+				<td><a href="git.html">Git</a></td>
+				<td>Git cheatsheet</td>
+			</tr>
+			
+			<tr>
+				<td><a href="https://structtv.slack.com/messages/" target="_blank">Struct</a></td>
+				<td>irc meets stackoverflow</td>
+			</tr>
+			
+			<tr>
+				<td></td>
+				<td></td>
+			</tr>
+			
+			
+			
+		</tbody>
+		</table>
+	</div>
+		<div class="col-md-6">
+		<table class="table table-striped table-hover">
+		<thead>
+			<tr>
+				<th colspan="2">Miscellaneous shortcuts</th>
+      </tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Evernote</td>
+				<td><code>[Title of note] ![Reminder Date] @[Folder] #[Tag]</code></td>
+			</tr>
+			<tr>
+				<td>grep</td>
+				<td><code>grep -ri "text" .</code></td>
+			</tr>
+		</tbody>
+		</table>
+		
+		<table class="table table-striped table-hover">
+		<thead>
+			<tr>
+				<th colspan="2">Wordpress shortcuts</th>
+      </tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Ctrl + 7</td>
+				<td>Paragraph</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+</div>
+<div class="countdown">
+<script type="text/javascript">
+//Set the two dates
+today=new Date()
+var christmas=new Date(2015, 07, 24) //Month is 0-11 in JavaScript
+if (today.getMonth()==11 && today.getDate()>25) //if Christmas has passed already
+christmas.setFullYear(christmas.getFullYear()+1) //calculate next year's Christmas
+//Set 1 day in milliseconds
+var one_day=1000*60*60*24
+
+//Calculate difference btw the two dates, and convert to days
+document.write(Math.ceil((christmas.getTime()-today.getTime())/(one_day)))
+
+</script></div>
 </body>
 </html>
-
