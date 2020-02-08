@@ -20,7 +20,7 @@
 				right: 10px;
 		</style>
   </head>
-<body onload="dotime()">
+<body>
 <div class="container">
 	<h1>Red Bit Blue Bit dashboard</h1>
 	<div class="col-md-6">
@@ -92,6 +92,20 @@
     -->
 	</div>
   <div class="col-md-6">
+		<h2>vim</h2>
+  <table class="table table-striped table-hover">
+		<thead>
+			<tr>vim commands
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>:g/searchString/d</code></td>
+        <td>Delete any lines containing <code>searchString</code></td>
+      </tr>
+    </tbody>
+  </table>
+
     <!--
     <h2>Markdown</h2>
   <table class="table table-striped table-hover">
@@ -122,53 +136,6 @@
   </div>
 </div>
 
-<div class="countdown">
-  <div id="t"></div>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script type="text/javascript">
 
-
-function dotime(){
-	
-	// $("body").css({"transition": "all 0.8s", "-webkit-transition": "all 0.8s"});
-	
-	var d = new Date();
-	var hours = d.getHours();
-	var mins = d.getMinutes();
-	var secs = d.getSeconds();
-	
-	if (hours < 10){hours = "0" + hours};
-	if (mins < 10){mins = "0" + mins};
-	if (secs < 10){secs = "0" + secs};
-	
-	hours.toString();
-	mins.toString();
-	secs.toString();
-	
-	$("#t").html(hours +":"+ mins +":"+ secs);
-	// $('#t').css('color', hex);
-
-	// var hex = "#" + hours + mins + secs;
-	// $("#h").html(hex);
-  // $("#t").style.color = hex;
-	
-	setTimeout(function(){ dotime();}, 1000);
-}
-
-</script>
-<script type="text/javascript">
-//Set the two dates
-today=new Date()
-var dadate=new Date(2015, 07, 24) //Month is 0-11 in JavaScript
-var birthdate=new Date(2015, 06, 18) //Month is 0-11 in JavaScript
-//Set 1 day in milliseconds
-var one_day=1000*60*60*24
-
-//Calculate difference btw the two dates, and convert to days
-document.write(Math.ceil((birthdate.getTime()-today.getTime())/(one_day)))
-document.write(' / ')
-document.write(Math.ceil((dadate.getTime()-today.getTime())/(one_day)))
-
-</script></div>
 </body>
 </html>
